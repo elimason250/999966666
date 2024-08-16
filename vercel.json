@@ -1,0 +1,32 @@
+{
+"version": 2,
+"builds": [
+{
+"src": "./src/index.html",
+"use": "@vercel/static-build",
+"config": {
+"includePaths": ["./src/css", "./src/js"]
+}
+}
+],
+"rewrites": [
+{
+"source": "/",
+"destination": "index.html"
+},
+{
+"source": "/about",
+"destination": "about.html"
+}
+],
+"headers": [
+{
+"headers": [
+{
+"key": "Cache-Control",
+"value": "max-age=3600"
+}
+]
+}
+]
+}
